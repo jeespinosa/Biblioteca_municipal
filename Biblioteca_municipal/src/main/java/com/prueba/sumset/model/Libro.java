@@ -2,8 +2,13 @@ package com.prueba.sumset.model;
 
 import java.awt.Image;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="libro")
 public class Libro {
 
+	@Id
 	private int idLibro;
 	private String nombre;
 	private String descripcion;

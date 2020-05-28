@@ -1,7 +1,12 @@
 package com.prueba.sumset.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="usuario")
 public class Usuario {
 
+	@Id
 	private int idUsuario;
 	private String username;
 	private String password;

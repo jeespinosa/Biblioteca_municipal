@@ -1,10 +1,10 @@
 package com.prueba.sumset.controller;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.prueba.sumset.connect.SqlServerConnector;
 
 @Controller
 public class LoginController {
@@ -15,9 +15,12 @@ public class LoginController {
 	}
 
 	@RequestMapping("/verificarUsuario")
-	public String verificarUsuario(HttpServletRequest request, Model model) {
-		String username = request.getParameter("txtUsername");
-		String password = request.getParameter("txtPassword");
+	public String verificarUsuario(@RequestParam("txtUsername") String username,
+			@RequestParam("txtPassword") String password) {
+		
+		SqlServerConnector connector = new SqlServerConnector();
+		
+		connector.conectar();
 		if (username.equals("jorge") && password.equals("123")) {
 			return "prestamo";
 		} else {

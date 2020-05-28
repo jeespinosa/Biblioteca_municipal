@@ -1,7 +1,12 @@
 package com.prueba.sumset.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="zona")
 public class Zona {
 
+	@Id
 	private int idZona;
 	private String nombre;
 	
