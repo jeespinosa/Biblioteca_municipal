@@ -4,16 +4,33 @@ import java.util.Date;
 
 import javax.persistence.*;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+
 @Entity
 @Table(name="prestamo")
 public class Prestamo {
+	
+	public Prestamo (int idPrestamo, int idUsuario, int idLibro, Date fecha)
+	{
+		this.idPrestamo = idPrestamo;
+		this.idUsuario = idUsuario;
+		this.idLibro = idLibro;
+		this.fechaPrestamo = fecha;
+	}
+	public Prestamo()
+	{
+		
+	}
 	@Id
+	@Column(name="idPrestamo")
 	private int idPrestamo;
-	
+	@Column(name="idUsuario")
 	private int idUsuario;
-	
+	@Column(name="idLibro")
 	private int idLibro;
-	private Date fechaLibro;
+	@Column(name="fechaPrestamo")
+	private Date fechaPrestamo;
 	
 	public int getIdPrestamo() {
 		return idPrestamo;
@@ -33,10 +50,10 @@ public class Prestamo {
 	public void setIdLibro(int idLibro) {
 		this.idLibro = idLibro;
 	}
-	public Date getFechaLibro() {
-		return fechaLibro;
+	public Date getFechaPrestamo() {
+		return fechaPrestamo;
 	}
-	public void setFechaLibro(Date fechaLibro) {
-		this.fechaLibro = fechaLibro;
+	public void setFechaPrestamo(Date fechaPrestamo) {
+		this.fechaPrestamo = fechaPrestamo;
 	}
 }

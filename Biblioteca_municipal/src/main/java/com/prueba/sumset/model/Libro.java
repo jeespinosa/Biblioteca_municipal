@@ -1,19 +1,32 @@
 package com.prueba.sumset.model;
 
-import java.awt.Image;
-
 import javax.persistence.*;
 
 @Entity
 @Table(name="libro")
 public class Libro {
 
+	public Libro()
+	{
+	}
+	public Libro(int idLibro, String nombre, String descripcion, int categoriaEdad, int idZona)
+	{
+		this.idLibro = idLibro;
+		this.nombre = nombre;
+		this.descripcion = descripcion;
+		this.categoriaEdad = categoriaEdad;
+		this.idZona = idZona;
+	}
 	@Id
+	@Column(name="idLibro")
 	private int idLibro;
+	@Column(name="nombre")
 	private String nombre;
+	@Column(name="descripcion")
 	private String descripcion;
-	private Image portada;
+	@Column(name="categoriaEdad")
 	private int categoriaEdad;
+	@Column(name="idZona")
 	private int idZona;
 	
 	public int getIdLibro() {
@@ -33,12 +46,6 @@ public class Libro {
 	}
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
-	}
-	public Image getPortada() {
-		return portada;
-	}
-	public void setPortada(Image portada) {
-		this.portada = portada;
 	}
 	public int getCategoriaEdad() {
 		return categoriaEdad;

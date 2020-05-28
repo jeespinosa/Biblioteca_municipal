@@ -7,6 +7,7 @@
 <title>Login</title>
 </head>
 <body>
+<h1 align = "center">Inicio de sesion</h1>
 	<div align = "center">
 		<form action = "verificarUsuario" method = "get">
 			<label>Usuario:</label>  <input type="text" name="txtUsername">

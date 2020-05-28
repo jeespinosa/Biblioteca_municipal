@@ -7,7 +7,9 @@ import javax.persistence.*;
 public class Zona {
 
 	@Id
+	@Column(name="idZona")
 	private int idZona;
+	@Column(name="nombre")
 	private String nombre;
 	
 	public int getIdZona() {

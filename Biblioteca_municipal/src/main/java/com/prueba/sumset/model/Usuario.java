@@ -7,9 +7,13 @@ import javax.persistence.*;
 public class Usuario {
 
 	@Id
+	@Column(name="idUsuario")
 	private int idUsuario;
+	@Column(name="username")
 	private String username;
+	@Column(name="password")
 	private String password;
+	@Column(name="edad")
 	private int edad;
 	
 	public int getIdUsuario() {

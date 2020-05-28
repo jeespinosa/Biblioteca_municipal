@@ -8,7 +8,7 @@
 </head>
 <body>
 <div align = "center">
-		<form action = "verificarUsuario" method = "get">
+		<form action = "registarLibro" method = "get">
 			<label>Nombre del libro:</label>  <input type="text" name="txtNombre">
 			<br>
 			<br>
@@ -21,9 +21,6 @@
 			<label>Zona:</label>  <input type="number" name="txtZona">	
 			<br>
 			<br>
-			<label>Portada</label>  <input type="file" name="imagen" accept=".jpg, .png, .pdf">
-			<br>
-			<br>		
 			<input type = "submit" value = "Aceptar">
 		</form>			
 	</div>
