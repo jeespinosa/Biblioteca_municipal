@@ -6,9 +6,7 @@
 
 	<display-name>Biblioteca municipal</display-name>
 
-	<absolute-ordering />
-
-	
+	<absolute-ordering />	
 
 	<!-- Configuracion del dispatcher servlet -->
 	<servlet>

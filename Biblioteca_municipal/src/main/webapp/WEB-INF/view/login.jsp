@@ -8,16 +8,15 @@
 </head>
 <body>
 	<div align = "center">
-		
+		<form action = "verificarUsuario" method = "get">
 			<label>Usuario:</label>  <input type="text" name="txtUsername">
 			<br>
 			<br>
 			<label>Contraseña:</label>  <input type="password" name="txtPassword">
 			<br>
 			<br>			
-			<button onclick="location.href='prestamo'">Aceptar</button>
-			
-			
+			<input type = "submit" value = "Aceptar">
+		</form>			
 	</div>
 </body>
 </html>
